@@ -1,5 +1,5 @@
 export default class Airport {
-  contructor(name, code) {
+  constructor(name, code) {
     this._name = name;
     this._code = code;
   }
