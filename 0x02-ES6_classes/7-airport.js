@@ -3,21 +3,8 @@ export default class Airport {
     this._name = name;
     this._code = code;
   }
-
-  get name() {
-    return this._code;
-  }
-
-  set name(value) {
-    this._name = value;
-  }
-
-  get code() {
-    return this._code;
-  }
-
-  set code(value) {
-    this._code = value;
+  [Symbol.for('nodejs.util.inspect.custom')]() {
+    return `Airport [${this._code}] { _name: '${this._name}', _code: '${this._code}' }`; // eslint-disable-line
   }
 
   toString() {
